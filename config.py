@@ -11,12 +11,11 @@ class Config:
     MAIL_PORT=465
     MAIL_USE_TLS = False
     MAIL_USE_SSL= True
-    MAIL_USERNAME = 'havid.zheng@gmail.com'
-    MAIL_PASSWORD = 'XXX'
+    MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
+    MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
     FLASKY_MAIL_SUBJECT_PREFIX = '[Flasky]'
-    FLASKY_MAIL_SENDER = 'havid.zheng@gmail.com'
-    # FLASKY_ADMIN = os.environ.get('FLASKY_ADMIN')
-    FLASKY_ADMIN = MAIL_USERNAME
+    FLASKY_MAIL_SENDER = 'Flasky Admin <flasky@example.com>'
+    FLASKY_ADMIN = os.environ.get('FLASKY_ADMIN')
     FLASKY_POSTS_PER_PAGE = 20
     FLASKY_FOLLOWERS_PER_PAGE = 50
     FLASKY_COMMENTS_PER_PAGE = 30
