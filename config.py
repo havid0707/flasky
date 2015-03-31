@@ -7,10 +7,10 @@ class Config:
     SSL_DISABLE = False
     SQLALCHEMY_COMMIT_ON_TEARDOWN = True
     SQLALCHEMY_RECORD_QUERIES = True
-    MAIL_SERVER = 'smtp.gmail.com'
-    MAIL_PORT=465
+    MAIL_SERVER = 'smtp.163.com'
+    MAIL_PORT=25
     MAIL_USE_TLS = False
-    MAIL_USE_SSL= True
+    MAIL_USE_SSL= False
     MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
     FLASKY_MAIL_SUBJECT_PREFIX = '[Flasky]'
